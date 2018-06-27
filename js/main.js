@@ -1,4 +1,4 @@
-const select = document.querySelector("BipCardSelection")
+const bipSelectp = document.querySelector("BipCardSelection")
 const inputText = document.querySelector("input")
 let bipCards = null;
 
@@ -17,21 +17,24 @@ fetch("http://www.psep.cl/api/Bip.php?&numberBip=666")//Solicitud de la data de 
 
 renderInfoBip = (bipCards) => {
   if (bipCards) {
-    let innerHtml = "";
-
-    for (let i = 0; i < bipCards.length; i++) {
-      let bip = bipCards[i];
-
-      if (bip) {
-        innerHtml += "<option value='" + i + "'>" + bipCards["N&ordm; tarjeta bip! "] + "</option>";
+   
+    for (const bipKey in bipCards) { //iterar en las llaves de la tarjeta bip
+      if (object.hasOwnProperty(bipKey)) {
+        const itemCard = bipCards[bipKey];
+        
       }
+    }
+
     }
     bipSelect.innerHtml = innerHtml
 
-inputText.addEventListener() => {
+ inputText.addEventListener(,) => {
 
 }
 
-select.addEventListener(change, () )=>{
+bipSelect.addEventListener(change, () ) => {
+  let bipIndex = bipSelect.value; 
+
 
 }
+
